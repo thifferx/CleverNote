@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".About" />
         <activity android:name=".Settings" />
-        <activity android:name=".AddNew"></activity>
+        <activity android:name=".AddNew" />
+        <activity android:name=".ImagePost"></activity>
     </application>
 
 </manifest>
