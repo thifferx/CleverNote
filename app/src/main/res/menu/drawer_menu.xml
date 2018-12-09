@@ -12,19 +12,14 @@
             android:id="@+id/nav_audio"
             android:icon="@drawable/ic_mic"
             android:title="Add audio post" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_person"
+            android:icon="@drawable/ic_person"
+            android:title="About" />
     </group>
-
-    <item android:title="Options">
-        <menu>
-            <item
-                android:id="@+id/nav_settings"
-                android:icon="@drawable/ic_settings"
-                android:title="Settings" />
-            <item
-                android:id="@+id/nav_person"
-                android:icon="@drawable/ic_person"
-                android:title="About" />
-        </menu>
-    </item>
 
 </menu>

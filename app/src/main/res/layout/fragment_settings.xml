@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_light">
+    android:background="@android:color/holo_blue_light">
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:text="Settings"
-        android:textSize="30sp" />
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:paddingTop="30dp"
+        android:id="@+id/set"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/set"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:paddingTop="10dp"
+            android:text="Kliknutím nastavíte barvu Menu."
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="156dp"
+                android:layout_height="276dp"
+                android:layout_alignRight="@+id/imageView3"
+                android:layout_alignBottom="@+id/imageView3"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="21dp"
+                android:layout_marginRight="-192dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/image1" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="148dp"
+                android:layout_height="277dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/image2" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

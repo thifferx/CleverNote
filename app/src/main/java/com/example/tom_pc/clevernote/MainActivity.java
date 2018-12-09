@@ -57,10 +57,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         new AudioFragment()).commit();
                 break;
             case R.id.nav_settings:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new SettingsFragment()).commit();
                 break;
             case R.id.nav_person:
-                Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new AboutFragment()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
