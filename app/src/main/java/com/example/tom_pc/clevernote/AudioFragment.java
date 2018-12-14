@@ -1,6 +1,5 @@
 package com.example.tom_pc.clevernote;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -66,7 +65,7 @@ public class AudioFragment extends Fragment {
 
     private void init(){
         edtName = (EditText) getView().findViewById(R.id.edtName);
-        edtCategory = (EditText) getView().findViewById(R.id.edtPrice);
+        edtCategory = (EditText) getView().findViewById(R.id.edtCategory);
         btnRecord = (Button) getView().findViewById(R.id.btnRecord);
         btnPlay = (Button) getView().findViewById(R.id.btnPlay);
         btnAdd = (Button) getView().findViewById(R.id.btnAdd);
