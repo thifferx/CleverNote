@@ -18,28 +18,30 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         database.execSQL(sql);
     }
 
-    public void insertData(String name, String category){
+    public void insertData(String name, String category, String path){
         SQLiteDatabase database = getWritableDatabase();
-        String sql = "INSERT INTO MUSIC VALUES (NULL, ?, ?)";
+        String sql = "INSERT INTO MUSIC VALUES (NULL, ?, ?, ?)";
 
         SQLiteStatement statement = database.compileStatement(sql);
         statement.clearBindings();
 
         statement.bindString(1, name);
         statement.bindString(2, category);
+        statement.bindString(3, path);
 
         statement.executeInsert();
     }
 
-    public void updateData(String name, String category, int id) {
+    public void updateData(String name, String category, String path, int id) {
         SQLiteDatabase database = getWritableDatabase();
 
-        String sql = "UPDATE MUSIC SET name = ?, category = ? WHERE id = ?";
+        String sql = "UPDATE MUSIC SET name = ?, category = ?, path = ? WHERE id = ?";
         SQLiteStatement statement = database.compileStatement(sql);
 
         statement.bindString(1, name);
         statement.bindString(2, category);
-        statement.bindDouble(3, (double)id);
+        statement.bindString(3, path);
+        statement.bindDouble(4, (double)id);
 
         statement.execute();
         database.close();

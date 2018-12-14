@@ -4,15 +4,25 @@ public class MusicPost {
     private int id;
     private String name;
     private String category;
+    private String path;
 
-    public MusicPost(String name, String category,int id) {
+    public MusicPost(String name, String category, String path, int id) {
         this.name = name;
         this.category = category;
+        this.path = path;
         this.id = id;
     }
 
     public int getId() {
         return id;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public void setId(int id) {

@@ -45,6 +45,8 @@ public class MusicList extends Fragment {
 
     }
 
+
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -59,7 +61,8 @@ public class MusicList extends Fragment {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);
             String category = cursor.getString(2);
-            list.add(new MusicPost(name, category, id));
+            String path = cursor.getString(3);
+            list.add(new MusicPost(name, category, path, id));
         }
         adapter.notifyDataSetChanged();
         gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -123,7 +126,7 @@ public class MusicList extends Fragment {
                     AudioFragment.sqLiteHelper.updateData(
                             edtName.getText().toString().trim(),
                             edtCategory.getText().toString().trim(),
-                            position
+                            "",position
                     );
                     dialog.dismiss();
                     Toast.makeText(getActivity(), "Update successfully!!!",Toast.LENGTH_SHORT).show();
@@ -171,7 +174,8 @@ public class MusicList extends Fragment {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);
             String category = cursor.getString(2);
-            list.add(new MusicPost(name, category, id));
+            String path = cursor.getString(3);
+            list.add(new MusicPost(name, category, path, id));
         }
         adapter.notifyDataSetChanged();
     }

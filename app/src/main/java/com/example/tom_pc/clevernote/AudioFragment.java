@@ -116,7 +116,7 @@ public class AudioFragment extends Fragment {
 
 
         sqLiteHelper = new SQLiteHelper(getContext(), "MusicDB.sqlite", null, 1);
-        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS MUSIC(Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, category VARCHAR)");
+        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS MUSIC(Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, category VARCHAR, path VARCHAR)");
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,11 +124,13 @@ public class AudioFragment extends Fragment {
                 try{
                     sqLiteHelper.insertData(
                             edtName.getText().toString().trim(),
-                            edtCategory.getText().toString().trim()
+                            edtCategory.getText().toString().trim(),
+                            pathSave
                     );
                     Toast.makeText(getActivity(), "Added successfully!", Toast.LENGTH_SHORT).show();
                     edtName.setText("");
                     edtCategory.setText("");
+                    pathSave = "";
                 }
                 catch (Exception e){
                     e.printStackTrace();
