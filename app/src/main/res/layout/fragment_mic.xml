@@ -50,9 +50,9 @@
         android:layout_width="78dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Message"
-        android:layout_marginStart="-119dp"
-        android:layout_marginLeft="-119dp"
-        android:layout_marginBottom="-12dp"
+        android:layout_marginStart="-116dp"
+        android:layout_marginLeft="-116dp"
+        android:layout_marginBottom="-13dp"
         android:layout_toEndOf="@+id/Message"
         android:layout_toRightOf="@+id/Message"
         android:text="Record" />
@@ -62,12 +62,36 @@
         android:layout_width="78dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Message"
-        android:layout_marginStart="-6dp"
-        android:layout_marginLeft="-6dp"
-        android:layout_marginBottom="-12dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginBottom="-10dp"
         android:layout_toEndOf="@+id/Message"
         android:layout_toRightOf="@+id/Message"
         android:text="Play" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Message"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="-54dp"
+        android:layout_toEndOf="@+id/Message"
+        android:layout_toRightOf="@+id/Message"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Message"
+        android:layout_marginStart="-116dp"
+        android:layout_marginLeft="-116dp"
+        android:layout_marginBottom="-58dp"
+        android:layout_toEndOf="@+id/Message"
+        android:layout_toRightOf="@+id/Message"
+        android:text="Stop Record" />
 
     <Button
         android:id="@+id/btnAdd"
