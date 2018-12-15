@@ -51,6 +51,7 @@ public class MusicListAdapter extends BaseAdapter {
 
         View row = view;
         ViewHolder holder = new ViewHolder();
+        MusicPost post = musicList.get(position);
 
         if(row == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -65,7 +66,6 @@ public class MusicListAdapter extends BaseAdapter {
             holder = (ViewHolder) row.getTag();
         }
 
-        MusicPost post = musicList.get(position);
 
         holder.txtName.setText(post.getName());
         holder.txtCategory.setText(post.getCategory());

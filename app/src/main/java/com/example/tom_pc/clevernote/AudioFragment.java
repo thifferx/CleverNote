@@ -130,7 +130,7 @@ public class AudioFragment extends Fragment {
                     Toast.makeText(getActivity(), "Added successfully!", Toast.LENGTH_SHORT).show();
                     edtName.setText("");
                     edtCategory.setText("");
-                    pathSave = "";
+                    //pathSave = "";
                 }
                 catch (Exception e){
                     e.printStackTrace();

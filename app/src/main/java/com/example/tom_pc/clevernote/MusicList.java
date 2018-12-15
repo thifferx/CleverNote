@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Filter;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -125,8 +126,7 @@ public class MusicList extends Fragment {
                 try {
                     AudioFragment.sqLiteHelper.updateData(
                             edtName.getText().toString().trim(),
-                            edtCategory.getText().toString().trim(),
-                            "",position
+                            edtCategory.getText().toString().trim(), "", position
                     );
                     dialog.dismiss();
                     Toast.makeText(getActivity(), "Update successfully!!!",Toast.LENGTH_SHORT).show();
