@@ -70,6 +70,7 @@ public class NewsListAdapter extends BaseAdapter {
         holder.txtDescription.setText(post.getDescription());
         holder.txtArticle.setText("Article no. " + Integer.toString(post.getId()));
 
+
         return row;
     }
 }

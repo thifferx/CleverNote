@@ -86,8 +86,9 @@ public class NewsList extends Fragment {
             HttpsURLConnection httpURLConnection = null;
 
             try {
-                URL url = new URL("https://api.myjson.com/bins/1dpe90");
+                URL url = new URL("https://api.myjson.com/bins/s6dsc"); // https://newsapi.org/s/ign-api
                 httpURLConnection = (HttpsURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("GET");
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 while(line != null){

@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Filter;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -56,7 +55,7 @@ public class MusicList extends Fragment {
         gridView.setAdapter(adapter);
 
         // get all data from sqlite
-        Cursor cursor = AudioFragment.sqLiteHelper.getData("SELECT * FROM MUSIC");
+        Cursor cursor = AudioFragment.sqLiteHelper1.getData("SELECT * FROM MUSIC");
         list.clear();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
@@ -79,7 +78,7 @@ public class MusicList extends Fragment {
                     public void onClick(DialogInterface dialog, int item) {
                         if (item == 0) {
                             // update
-                            Cursor c = AudioFragment.sqLiteHelper.getData("SELECT id FROM MUSIC");
+                            Cursor c = AudioFragment.sqLiteHelper1.getData("SELECT id FROM MUSIC");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -89,7 +88,7 @@ public class MusicList extends Fragment {
 
                         } else {
                             // delete
-                            Cursor c = AudioFragment.sqLiteHelper.getData("SELECT id FROM MUSIC");
+                            Cursor c = AudioFragment.sqLiteHelper1.getData("SELECT id FROM MUSIC");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -111,7 +110,7 @@ public class MusicList extends Fragment {
         dialog.setContentView(R.layout.update_music_fragment);
         dialog.setTitle("Update");
 
-        final EditText edtName = (EditText) dialog.findViewById(R.id.edtName);
+        final EditText edtName = (EditText) dialog.findViewById(R.id.edtPostName);
         final EditText edtCategory = (EditText) dialog.findViewById(R.id.edtCategory);
 
         Button btnUpdate = (Button) dialog.findViewById(R.id.btnUpdate);
@@ -124,7 +123,7 @@ public class MusicList extends Fragment {
             @Override
             public void onClick(View v) {
                 try {
-                    AudioFragment.sqLiteHelper.updateData(
+                    AudioFragment.sqLiteHelper1.updateData(
                             edtName.getText().toString().trim(),
                             edtCategory.getText().toString().trim(), "", position
                     );
@@ -148,7 +147,7 @@ public class MusicList extends Fragment {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try {
-                    AudioFragment.sqLiteHelper.deleteData(idMusic);
+                    AudioFragment.sqLiteHelper1.deleteData(idMusic);
                     Toast.makeText(getActivity(), "Delete successfully!!!",Toast.LENGTH_SHORT).show();
                 } catch (Exception e){
                     Log.e("error", e.getMessage());
@@ -168,7 +167,7 @@ public class MusicList extends Fragment {
 
     private void updateMusicList(){
         // get all data from sqlite
-        Cursor cursor = AudioFragment.sqLiteHelper.getData("SELECT * FROM MUSIC");
+        Cursor cursor = AudioFragment.sqLiteHelper1.getData("SELECT * FROM MUSIC");
         list.clear();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);

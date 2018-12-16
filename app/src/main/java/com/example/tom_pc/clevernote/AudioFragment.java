@@ -21,7 +21,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.UUID;
 
 
@@ -30,7 +29,7 @@ public class AudioFragment extends Fragment {
     TextView message;
     EditText edtName, edtCategory;
     Button btnRecord, btnPlay, btnAdd, btnStopRecord, btnList, btnStop;
-    public static SQLiteHelper sqLiteHelper;
+    public static SQLiteHelper sqLiteHelper1;
     MediaRecorder mediaRecorder;
     MediaPlayer mediaPlayer;
     private String pathSave;
@@ -115,14 +114,14 @@ public class AudioFragment extends Fragment {
         }
 
 
-        sqLiteHelper = new SQLiteHelper(getContext(), "MusicDB.sqlite", null, 1);
-        sqLiteHelper.queryData("CREATE TABLE IF NOT EXISTS MUSIC(Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, category VARCHAR, path VARCHAR)");
+        sqLiteHelper1 = new SQLiteHelper(getContext(), "MusicDB.sqlite", null, 1);
+        sqLiteHelper1.queryData("CREATE TABLE IF NOT EXISTS MUSIC(Id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, category VARCHAR, path VARCHAR)");
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try{
-                    sqLiteHelper.insertData(
+                    sqLiteHelper1.insertData(
                             edtName.getText().toString().trim(),
                             edtCategory.getText().toString().trim(),
                             pathSave
@@ -183,7 +182,7 @@ public class AudioFragment extends Fragment {
     }
 
     private void init(){
-        edtName = (EditText) getView().findViewById(R.id.edtName);
+        edtName = (EditText) getView().findViewById(R.id.edtPostName);
         edtCategory = (EditText) getView().findViewById(R.id.edtCategory);
         btnRecord = (Button) getView().findViewById(R.id.btnRecord);
         btnPlay = (Button) getView().findViewById(R.id.btnPlay);

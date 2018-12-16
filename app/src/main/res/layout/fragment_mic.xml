@@ -5,7 +5,7 @@
     android:background="@android:color/holo_blue_light">
 
     <EditText
-        android:id="@+id/edtName"
+        android:id="@+id/edtPostName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -24,7 +24,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:hint="Category"
-        android:layout_below="@+id/edtName"
+        android:layout_below="@+id/edtPostName"
         android:layout_marginTop="12dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
