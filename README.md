@@ -6,10 +6,10 @@ Aplikace pro tvorbu vlastních poznámek, textové a zvukové poznámky, k pozn�
 
 Funkcionalita + Specifikace:
 
-Pro zobrazení dat jsem použil - ListView, GridView
-Menu pomocí Draweru s animací - přepínání mezi Fragmenty
-Uložení barvy Draweru pomocí SharedPreferences - nutno potvrdit najetím do Settings
-Zvukové poznámky - Media Recorder, MediaPlayer
-Poznámky s obrázkem z galerie
-Ukládání poznámek pomocí SQLite
-Načítání a vypsání článků z IGN.com pomocí News API (JSON formát) + AsyncTask + intent na Browser pro detaily článku
+Pro zobrazení dat jsem použil - ListView, GridView.
+Menu pomocí Draweru s animací - přepínání mezi Fragmenty.
+Uložení barvy Draweru pomocí SharedPreferences - nutno potvrdit najetím do Settings.
+Zvukové poznámky - Media Recorder, MediaPlayer.
+Poznámky s obrázkem z galerie.
+Ukládání poznámek pomocí SQLite.
+Načítání a vypsání článků z IGN.com pomocí News API (JSON formát) + AsyncTask + intent na Browser pro detaily článku.
